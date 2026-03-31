@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario de cadastro</title>
+</head>
+<body>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        fieldset { margin-bottom: 15px; padding: 10px; }
+        legend { font-weight: bold; }
+        label { display: block; margin-top: 10px; }
+        input, select, textarea { width: 100%; padding: 5px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px 15px; }
+    </style>
+</head>
+<body>
+
+    <h2>Formulário de Cadastro</h2>
+
+    <!-- REQUISITO: Form com method -->
+    <form action="/salvar" method="POST">
+
+        <!-- REQUISITO: Agrupar com fieldset e legend -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <!-- REQUISITO: Label e name -->
+            <label for="nome"><b>Nome Completo:</b></label>
+            <input type="text" id="nome" name="nome_completo" required>
+
+            <label for="email"><b>e-mail</b>:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha"><b>Senha:</b></label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="nascimento"><b>Data de Nascimento:</b></label>
+            <input type="date" id="nascimento" name="data_nascimento">
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações Adicionais</legend>
+            
+            <label>Gênero:</label>
+            <input type="radio" id="masc" name="genero" value="M"> Masculino
+            <input type="radio" id="fem" name="genero" value="F"> Feminino
+
+            <label>Interesses:</label>
+            <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia
+            <input type="checkbox" name="interesses" value="esportes"> Esportes
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="brasil">Brasil</option>
+                <option value="portugal">Portugal</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Outros</legend>
+            <label for="foto">Foto de Perfil:</label>
+            <input type="file" id="foto" name="foto_perfil">
+
+            <label for="cor">Cor Favorita:</label>
+            <input type="color" id="cor" name="cor_favorita">
+
+            <label for="satisfacao">Nível de Satisfação:</label>
+            <input type="range" id="satisfacao" name="satisfacao" min="0" max="10">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+        </fieldset>
+
+        <!-- REQUISITO: Ações - Enviar e Limpar -->
+        <button type="submit">Cadastrar</button>
+        <button type="reset">Limpar Formulário</button>
+    </form>
+
+</body>
+</html>
+</body>
+</htm
